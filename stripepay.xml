@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension version="1.6" method="upgrade" type="plugin" group="payperdownloadplus">
+	<name>PayperDownloadPlus - StripePay</name>
+	<version>1.0</version>
+	<creationDate>May 2017</creationDate>
+	<author>Ratmil</author>
+	<authorUrl>www.ratmilwebsolutions.com</authorUrl>
+	<description>Plugin for Pay per download Plus component to use Stripe Payment Gateway</description>
+	<license>GNU GPL</license>
+	<languages>
+		<language tag="en-GB">en-GB.plg_payperdownloadplus_stripepay.ini</language>
+	</languages>
+	<files>
+		<filename plugin="stripepay">stripepay.php</filename>
+		<folder>stripe</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="public_key" type="text" size="80"  
+						label="COM_STRIPEPAY_PUBLIC_KEY" 
+						description="COM_STRIPEPAY_PUBLIC_KEY_DESC"
+						default=""/>
+				<field name="secret_key" type="text" size="80"  
+						label="COM_STRIPEPAY_SECRET_KEY" 
+						description="COM_STRIPEPAY_SECRET_KEY_DESC"
+						default=""/>
+				<field name="customer_email" type="text" size="80"  
+						label="COM_STRIPEPAY_CUSTOMER_EMAIL" 
+						description="COM_STRIPEPAY_CUSTOMER_EMAIL_DESC"
+						default=""
+						validate="email"/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
